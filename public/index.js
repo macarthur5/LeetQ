@@ -35,24 +35,10 @@ class LeetQ {
 
         const filterTextFieldRef = document.querySelector(".filter");
         filterTextFieldRef.addEventListener("input", (event) => { this.onFilterTextChanged(event); });
-
-        const sortBySelect = document.querySelector("#sortBy");
-        sortBySelect.addEventListener("change", (event) => { this.onSortOrderChanged(event); });
     }
 
     //===================================================================================================================//
-
-    onSortOrderChanged(event) {
-        const value = document.querySelector("#sortBy").value;
-        if (value === "Date") {
-            this.sortingOrder = "D";
-        } else {
-            this.sortingOrder = "N";
-        }
-
-        this.displayData();
-    }
-
+    
     onAddClicked(event) {
         let value = document.querySelector("input.add-inp").value;
         value = value.trim();
@@ -186,7 +172,7 @@ class LeetQ {
 
         const noUrlsText = document.createElement("span");
         noUrlsText.classList.add("no-urls-text");
-        const noUrlsMessage = document.createTextNode("No URLs Found!");
+        const noUrlsMessage = document.createTextNode("Nothing Found!");
         noUrlsText.appendChild(noUrlsMessage);
 
         noUrlsDiv.appendChild(noUrlsImg);

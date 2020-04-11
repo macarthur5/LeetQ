@@ -35,9 +35,11 @@ input:focus {
 .heading {
   display: flex;
   align-items: center;
-  padding: 0px 15px;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  padding: 0px 23px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
   border-radius: 0px 0px 0px 30px;
+  background-color: white;
+  z-index: 1;
 }
 
 .logo {
@@ -62,9 +64,10 @@ input:focus {
   margin: 0px;
   flex-grow: 1;
   overflow-y: auto;
-  padding: 15px 10px;
+  padding: 92px 10px 15px 10px;
   overflow-x: hidden;
-  margin-top: 4px;
+  margin-top: -73px;
+  z-index: 0;
 }
 
 .add-row {
@@ -81,7 +84,7 @@ input.add-inp {
   padding: 3px 14px;
   font-size: 19px;
   color: rgb(100, 100, 100);
-  background-color: whitesmoke;
+  background-color: white;
   border: 1px solid rgb(80, 80, 80);
   box-sizing: border-box;
   min-width: 0px;
@@ -105,40 +108,37 @@ button.add-but:hover {
 .filter-wrapper {
   display: flex;
   align-items: center;
-  height: 60px;
-  margin: 4px 0px 3px;
-  padding: 0px 10px;
   box-sizing: border-box;
 }
 
 input.filter {
   flex-grow: 1;
-  border: 1px solid rgb(240, 240, 240);
+  border: 1px solid rgb(235, 235, 235);
   padding: 14px;
   font-size: 19px;
   color: rgb(80, 80, 80);
-  background-color: whitesmoke;
-  border-bottom: 3px solid darkcyan;
   box-sizing: border-box;
   min-width: 0px;
+  background-color: whitesmoke;
+  border-top: 1px solid rgb(170, 170, 170);
 }
 
 .url-wrapper {
   display: flex;
   align-items: center;
   margin: 3px;
-  box-shadow: 0px 0px 1px 1px rgb(80, 80, 80);
   padding: 12px 24px;
-  background-color: rgb(250, 161, 47);
-  color: whitesmoke;
+  background-color: #ffd166;
+  color: rgb(60, 60, 60);
   letter-spacing: -0.3px;
   text-decoration: none;
-  font-weight: bold;
   transition: all 0.2s;
+  border-radius: 4px;
 }
 
 .url-wrapper:hover {
   background-color: #2f3b47;
+  color: rgb(220, 220, 220);
 }
 
 .q-list {
@@ -165,6 +165,7 @@ input.filter {
 
 .match-text {
   background-color: #2f3b47;
+  color: whitesmoke;
 }
 
 .sort-wrapper {
@@ -172,13 +173,14 @@ input.filter {
   align-items: center;
   justify-content: center;
   background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(235, 235, 235);
   border-bottom: 3px solid darkcyan;
   margin-left: 5px;
   box-sizing: border-box;
 }
 
 .sort-wrapper select {
-  background-color: whitesmoke;
+  background-color: white;
   padding: 15px 35px;
   border: none;
   color: rgb(80, 80, 80);
