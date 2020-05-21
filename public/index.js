@@ -38,7 +38,7 @@ class LeetQ {
     }
 
     //===================================================================================================================//
-    
+
     onAddClicked(event) {
         let value = document.querySelector("input.add-inp").value;
         value = value.trim();
@@ -231,10 +231,24 @@ class LeetQ {
     }
 
     extractQuestionName(url) {
+        let nameIndex = 0;
+        let isFromCodeforces = false;
+
+        if (url.includes("hackerrank") || url.includes("geeksforgeeks")) {
+            nameIndex = 1;
+        } else if (url.includes("codeforces")) {
+            nameIndex = 1;
+            isFromCodeforces = true;
+        }
+
+        let index = 0;
         const urlParts = url.split("/");
         for (let i = urlParts.length - 1; i >= 0; --i) {
             if (urlParts[i].trim().length > 0) {
-                return urlParts[i].trim().split("-").join(" ");
+                if (index == nameIndex) {
+                    return (urlParts[i].trim().split("-").join(" ") + (isFromCodeforces ? "-" + urlParts[i + 1] : ""));
+                }
+                ++index;
             }
         }
         return url;
